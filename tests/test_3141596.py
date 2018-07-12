@@ -103,11 +103,11 @@ class TestUnitTesting(UnitTestingTestCase):
 
     @prepare_package("_Failure")
     def test_failure(self, txt):
-        self.assertRegexContains(txt, r'^FAILED \(failures=1\)')
+        self.assertRegexContains(txt, r'^FAILED \(failures=1\)', txt)
 
     @prepare_package("_Error")
     def test_error(self, txt):
-        self.assertRegexContains(txt, r'^ERROR')
+        self.assertRegexContains(txt, r'^ERROR', txt)
 
     @prepare_package("_Output", "tests/result")
     def test_output(self, txt):
