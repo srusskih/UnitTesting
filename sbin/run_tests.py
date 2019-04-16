@@ -168,7 +168,7 @@ def main(default_schedule_info):
 
     try:
         print("Wait for tests output...", end="")
-        wait_for_output(output_file, SCHEDULE_RUNNER_TARGET)
+        wait_for_output(output_file, SCHEDULE_RUNNER_TARGET, 60)
 
         print("Start to read output...")
         if not read_output(output_file):
